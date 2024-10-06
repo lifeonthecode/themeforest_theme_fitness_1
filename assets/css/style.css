@@ -325,6 +325,9 @@ body {
     right: 0rem;
     padding: 0.5rem 0rem;
     z-index: 16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header_section.is-sticky {
@@ -335,6 +338,9 @@ body {
     animation: slideDown 0.35s ease-out;
     background-color: #1a1a1a;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -473,7 +479,7 @@ body {
     width: 100%;
     min-height: 100vh;
     height: 100%;
-    background-image: url('../images/blogs/blog_3.jpg');
+    background-image: url('../images/clients/client_2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
