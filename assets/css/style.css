@@ -431,32 +431,14 @@ body {
 }
 /* mobile menu style end  */
 
-.menu_bar li a {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--text_color_2);
-    line-height: 1.2rem;
-    text-transform: capitalize;
-    cursor: pointer;
+.menu_bar li {
     position: relative;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
 }
 
-.menu_bar li a:hover {
-    color: var(--text_color_1);
-}
-
-.menu_bar li a.active {
-    color: var(--text_color_1);
-    position: relative;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-}
-
-
-.menu_bar li a::before,
-.menu_bar li a.active::after {
+.menu_bar li::before,
+.menu_bar li.active::after{
     position: absolute;
     bottom: -5px;
     left: 0px;
@@ -473,8 +455,8 @@ body {
 
 }
 
-.menu_bar li a::after,
-.menu_bar li a.active::after {
+.menu_bar li::after,
+.menu_bar li.active::after{
     position: absolute;
     bottom: -5px;
     right: 0px;
@@ -491,10 +473,31 @@ body {
 
 }
 
-.menu_bar li a:hover::before,
-.menu_bar li a:hover::after,
-.menu_bar li a.active::after {
+.menu_bar li:hover::before,
+.menu_bar li:hover::after,
+.menu_bar li.active::after {
     width: 100%;
+}
+
+.menu_bar li:hover {
+    color: var(--text_color_1);
+}
+
+
+.menu_bar li a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text_color_2);
+    line-height: 1.2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.menu_bar li.active a {
+    color: var(--text_color_1);
+    position: relative;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 

@@ -43,22 +43,42 @@ window.addEventListener("scroll", () => {
 
 
 // current page js 
-const links = document.querySelectorAll('.menu_bar li a');
-for(let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', (e) => {
-        links.forEach(element => {
-            if(element.className === 'active') {
-                element.classList.remove('active');
-            }
-        });
-        links[i].classList.add('active');
+// const links = document.querySelectorAll('.menu_bar li a');
+// for(let i = 0; i < links.length; i++) {
+//     links[i].addEventListener('click', (e) => {
+//         links.forEach(element => {
+//             if(element.className === 'active') {
+//                 element.classList.remove('active');
+//             }
+//         });
+//         links[i].classList.add('active');
 
-        // mobile menu show and hidden 
-        clickx.classList.toggle('Diam');
-        mobile_menu_container.classList.toggle('toggle');
-        mobile_menu_wrapper.classList.toggle('toggle');
+//         // mobile menu show and hidden 
+//         clickx.classList.toggle('Diam');
+//         mobile_menu_container.classList.toggle('toggle');
+//         mobile_menu_wrapper.classList.toggle('toggle');
+//     })
+// };
+
+// current page active js code 
+const nav_links = document.querySelectorAll('.menu_bar');
+const activePage = (links) => {
+  for (let i = 0; i < links.length; i++) {
+    const link = links[i];
+    link.addEventListener('click', () => {
+      links.forEach(element => {
+        if(element.className == 'active') {
+          element.classList.remove('active');
+        }
+      });
+      links[i].classList.add('active');
     })
-};
+    
+  }
+}
+
+activePage(nav_links[0].childNodes)
+activePage(nav_links[1].childNodes)
 
 
 // scroll to back top 
@@ -88,39 +108,6 @@ scroll_to_top.addEventListener('click', scrollToTop);
 
 
 
-
-// slider js 
-const sliderContainer = document.querySelector('.client_slider_container')
-const slideRight = document.querySelector('.right-slide')
-const slideLeft = document.querySelector('.left-slide')
-const upButton = document.querySelector('.slider-up-button')
-const downButton = document.querySelector('.slider-down-button')
-const slidesLength = slideRight.querySelectorAll('.right_slider_item').length
-
-let activeSlideIndex = 0;
-
-slideLeft.style.top = `-${(slidesLength - 1) * 50}vh`;
-
-upButton.addEventListener('click', () => changeSlide('up'))
-downButton.addEventListener('click', () => changeSlide('down'))
-
-const changeSlide = (direction) => {
-    const sliderHeight = sliderContainer.clientHeight
-    if(direction === 'up') {
-        activeSlideIndex++
-        if(activeSlideIndex > slidesLength - 1) {
-            activeSlideIndex = 0
-        }
-    } else if(direction === 'down') {
-        activeSlideIndex--
-        if(activeSlideIndex < 0) {
-            activeSlideIndex = slidesLength - 1
-        }
-    }
-
-    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
-    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
-}
 
 
 
