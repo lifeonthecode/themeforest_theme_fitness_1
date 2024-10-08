@@ -15,12 +15,12 @@ document.addEventListener('click', e => {
 // menu bar icon 
 const mobile_menu_container = document.querySelector('.mobile_menu_container')
 const mobile_menu_wrapper = document.querySelector('.mobile_menu_wrapper')
-const clickx= document.getElementById('pencet');
+const clickx = document.getElementById('pencet');
 
-clickx.addEventListener('click', () =>{
-  clickx.classList.toggle('Diam');
-  mobile_menu_container.classList.toggle('toggle');
-  mobile_menu_wrapper.classList.toggle('toggle');
+clickx.addEventListener('click', () => {
+    clickx.classList.toggle('Diam');
+    mobile_menu_container.classList.toggle('toggle');
+    mobile_menu_wrapper.classList.toggle('toggle');
 });
 
 
@@ -40,41 +40,25 @@ window.addEventListener("scroll", () => {
 });
 
 
-
-
-// current page js 
-// const links = document.querySelectorAll('.menu_bar li a');
-// for(let i = 0; i < links.length; i++) {
-//     links[i].addEventListener('click', (e) => {
-//         links.forEach(element => {
-//             if(element.className === 'active') {
-//                 element.classList.remove('active');
-//             }
-//         });
-//         links[i].classList.add('active');
-
-//         // mobile menu show and hidden 
-//         clickx.classList.toggle('Diam');
-//         mobile_menu_container.classList.toggle('toggle');
-//         mobile_menu_wrapper.classList.toggle('toggle');
-//     })
-// };
-
 // current page active js code 
 const nav_links = document.querySelectorAll('.menu_bar');
 const activePage = (links) => {
-  for (let i = 0; i < links.length; i++) {
-    const link = links[i];
-    link.addEventListener('click', () => {
-      links.forEach(element => {
-        if(element.className == 'active') {
-          element.classList.remove('active');
-        }
-      });
-      links[i].classList.add('active');
-    })
-    
-  }
+    for (let i = 0; i < links.length; i++) {
+        const link = links[i];
+        link.addEventListener('click', () => {
+            links.forEach(element => {
+                if (element.className == 'active') {
+                    element.classList.remove('active');
+                }
+            });
+            links[i].classList.add('active');
+            // mobile menu show and hidden  
+            clickx.classList.toggle('Diam');
+            mobile_menu_container.classList.toggle('toggle');
+            mobile_menu_wrapper.classList.toggle('toggle');
+        })
+
+    }
 }
 
 activePage(nav_links[0].childNodes)
@@ -86,12 +70,12 @@ let intervalId = 0;
 const scroll_to_top = document.querySelector('.scroll_to_top');
 const back_to_top = document.querySelector('.back_to_top');
 window.addEventListener('scroll', () => {
-    if(window.scrollY >= 350) {
+    if (window.scrollY >= 350) {
         back_to_top.classList.add('show')
-    }else {
+    } else {
         back_to_top.classList.remove('show')
     }
-} );
+});
 
 function scrollStep() {
     if (window.scrollY === 0) {
