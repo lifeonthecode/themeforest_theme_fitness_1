@@ -50,8 +50,13 @@ for(let i = 0; i < links.length; i++) {
             if(element.className === 'active') {
                 element.classList.remove('active');
             }
-        })
+        });
         links[i].classList.add('active');
+
+        // mobile menu show and hidden 
+        clickx.classList.toggle('Diam');
+        mobile_menu_container.classList.toggle('toggle');
+        mobile_menu_wrapper.classList.toggle('toggle');
     })
 };
 

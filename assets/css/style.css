@@ -176,7 +176,7 @@ body {
     z-index: 111;
     border: 1px solid var(--text_color_1);
     transition: all 0.2s ease-out;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.2s ease;
     animation: moveCursor1 .5s infinite alternate;
     -webkit-animation: moveCursor1 .5s infinite alternate;
 }
@@ -184,6 +184,7 @@ body {
 .expand {
     background: transparent;
     animation: moveCursor2 .5s forwards;
+    -webkit-animation: moveCursor2 .5s forwards;
     border: 1px solid var(--text_color_1);
 }
 
@@ -276,7 +277,7 @@ body {
     margin: 0.26em 0;
     display: block;
     transition: all .4s ease;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.4s ease;
     transform-origin: 0 0;
 }
 
@@ -305,7 +306,7 @@ body {
     background-color:hsl(0deg 0% 0% / 47%);
     z-index: 14;
     transition: all  0.7s ease;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.7s ease;
     display: none;
 }
 
@@ -320,7 +321,7 @@ body {
     padding: 2.5rem;
     background-color: var(--text_color_14);
     transition: all 0.7s ease;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.7s ease;
     transition-delay: 0.3s;
     -webkit-transition-delay: 0.3s;
 }
@@ -356,6 +357,7 @@ body {
     top: 0rem;
     left: 0rem;
     animation: slideDown 0.35s ease-out;
+    -webkit-animation: slideDown 0.35s ease-out;
     background-color: #1a1a1a;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     display: flex;
@@ -467,7 +469,7 @@ body {
     transform-origin: left;
     -webkit-transform-origin: left;
     transition: all 0.5s ease;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease;
 
 }
 
@@ -485,7 +487,7 @@ body {
     transform-origin: left;
     -webkit-transform-origin: left;
     transition: all 0.7s ease;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.7s ease;
 
 }
 
@@ -586,6 +588,7 @@ body {
     height: 100%;
     background-color: var(--btn_bg_color_1);
     transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
     z-index: -1;
 }
 
@@ -602,7 +605,7 @@ body {
     height: 100%;
     background-color: var(--text_color_14);
     transition: all 0.7s ease;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.7s ease;
     z-index: -1;
 }
 
@@ -1356,7 +1359,7 @@ body {
     transform-origin: left;
     -webkit-transform-origin: left;
     transition: all 0.5s ease;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease;
 
 }
 
@@ -1373,7 +1376,7 @@ body {
     transform-origin: left;
     -webkit-transform-origin: left;
     transition: all 0.7s ease;
-    -webkit-transition: all 0.3s ease;
+    -webkit-transition: all 0.7s ease;
 
 }
 
@@ -1399,6 +1402,7 @@ body {
 .footer_wrapper>.footer_social_icons a:hover {
     color: var(--text_color_1);
     animation: socialAnimated .3s infinite alternate;
+    -webkit-animation: socialAnimated .3s infinite alternate;
 }
 
 @keyframes socialAnimated {
